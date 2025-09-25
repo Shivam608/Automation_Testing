@@ -21,12 +21,16 @@ public class FrameWorkUtilities {
     }
 
     /// Read from Url.properties file
-    public static String getUrl(String key) throws IOException {
-        File file = new File((System.getProperty("user.dir")) + "\\src\\main\\resources\\url.properties");
-        try (InputStream stream = new FileInputStream(file)) {
-            Properties prop = new Properties();
-            prop.load(stream);
-            return String.valueOf(prop.get(key));
+    public static String getUrl(String key) {
+        try {
+            File file = new File((System.getProperty("user.dir")) + "\\src\\main\\resources\\url.properties");
+            try (InputStream stream = new FileInputStream(file)) {
+                Properties prop = new Properties();
+                prop.load(stream);
+                return String.valueOf(prop.get(key));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }

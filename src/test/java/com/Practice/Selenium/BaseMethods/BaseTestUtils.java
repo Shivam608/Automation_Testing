@@ -17,4 +17,12 @@ public abstract class BaseTestUtils extends BaseTest {
     public void flushReports() {
         super.flushReports();
     }
+
+    public void staticWait(long seconds) {
+        try {
+            Thread.sleep(seconds*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
