@@ -4,7 +4,8 @@
 <suite name="Demo Test Suite" parallel="classes" thread-count="4">
     <test name="Demo Test">
         <classes>
-            <class name="com.Practice.Selenium.DemoTestClass"/>
+            <class name="com.Practice.Selenium.LocatorPractice"/>
+            <class name="com.Practice.Selenium.DropDowns"/>
         </classes>
     </test>
 </suite>
