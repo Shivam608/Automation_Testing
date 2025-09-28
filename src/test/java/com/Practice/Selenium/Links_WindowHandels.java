@@ -5,14 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
 
-public class Links extends BaseTestUtils {
+public class Links_WindowHandels extends BaseTestUtils {
 
     @Test
     public void validateLinksAndCounts() {

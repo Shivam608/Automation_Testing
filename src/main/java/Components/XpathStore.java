@@ -24,4 +24,10 @@ public interface XpathStore {
     static By SelectCheckBoxDropdown(String text) {
         return By.xpath("//div[@id='discount-checkbox']//following::input[@type='checkbox'][.//following-sibling::label[contains(text(), '" + text + "')]]");
     }
+
+    By herokuAllContentLocator = By.xpath("//div[@id='content']/h2[contains(text(), 'Available')]/following::a");
+
+    static By dynamicLoadingContent(int contentIndex) {
+        return By.xpath("//a[contains(@href,'" + contentIndex + "')]");
+    }
 }
