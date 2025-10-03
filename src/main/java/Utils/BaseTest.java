@@ -4,6 +4,7 @@ import Components.FrameWorkUtilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import io.restassured.response.Response;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,6 +16,7 @@ public abstract class BaseTest extends FrameWorkUtilities {
      protected static ExtentSparkReporter sparkReporter;
      protected static ExtentTest extentTest;
      protected static ExtentReports extentReports;
+     public static Response response;
 
     public WebDriver initializeChromeDriver(String url) {
         WebDriver driver = new ChromeDriver();
